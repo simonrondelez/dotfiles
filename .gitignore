@@ -1,0 +1,59 @@
+# ignore all directories
+**/
+Dropbox
+
+# git 
+.git-credentials
+
+# allow shell config
+!.bashrc.d/
+!.config/
+.config/*
+!.config/fish/
+!.config/fish/completions/
+!.config/fish/conf.d/
+!.config/fish/functions/
+!.config/starship.toml
+
+
+# K8s
+!.kube/
+.kube/*
+!.kube/kubie.yaml
+
+# Compiled Python files
+*.pyc
+
+# Z database
+.z
+
+# Concourse
+.flyrc
+
+#secrets
+.secrets.sh
+.vault-token
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Histories
+.mysql_history
+.bash_history
+.zsh_history
+.lesshst
+
+#VIM
+.viminfo
+
+# Percona toolkit
+.percona-toolkit.uuid

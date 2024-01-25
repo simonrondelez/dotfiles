@@ -1,0 +1,34 @@
+[alias]
+	l = log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset| %s %Cgreen[%an]' -n 20 --graph --abbrev-commit --date=short
+	commit = commit
+	root = rev-parse --show-toplevel
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = Simon Rondelez
+	email = simonrondelez@me.com
+[push]
+	default = current
+[credential]
+	helper = store
+[help]
+	autocorrect = 1
+[commit]
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = true
+[rebase]
+	autoStash = true
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff "sopsdiffer"]
+	textconv = sops -d
+[credentials]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/simon/.git/.gitignore
