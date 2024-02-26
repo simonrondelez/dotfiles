@@ -6,3 +6,9 @@ scan_timeout = 10
 
 [kubernetes]
 disabled = false
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
