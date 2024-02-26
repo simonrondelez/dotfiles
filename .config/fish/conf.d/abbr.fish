@@ -4,8 +4,6 @@ abbr la 'exa -lgha'
 
 # shortcuts
 abbr k kubectl
-abbr kubectx kubie ctx
-abbr kubens kubie ns
 abbr kube-dashboard 'kubectl auth-proxy -n kubernetes-dashboard https://kubernetes-dashboard.svc'
 abbr fly-clean 'fly prune-worker --all-stalled'
 abbr tfdocs terraform-docs
