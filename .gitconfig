@@ -1,34 +1,46 @@
 [alias]
-	l = log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset| %s %Cgreen[%an]' -n 20 --graph --abbrev-commit --date=short
-	commit = commit
-	root = rev-parse --show-toplevel
+  l = log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset| %s %Cgreen[%an]' -n 20 --graph --abbrev-commit --date=short
+  commit = commit
+  root = rev-parse --show-toplevel
 
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [user]
-	name = Simon Rondelez
-	email = simonrondelez@me.com
+  name = Simon Rondelez
+  email = simonrondelez@me.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILj+8w7r8h0x57+D37wq0zes7UekAIu4kJ1nhX9BkKLQ
+
 [push]
-	default = current
+  default = current
+
 [credential]
-	helper = store
+  helper = store
+
 [help]
-	autocorrect = 1
+  autocorrect = 1
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
 [commit]
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+  # https://help.github.com/articles/signing-commits-using-gpg/
+  gpgsign = true
+
+[tag]
+  gpgsign = true
+
 [rebase]
-	autoStash = true
+  autoStash = true
+
 [pull]
-	rebase = true
+  rebase = true
+
 [fetch]
-	prune = true
+  prune = true
+
 [diff "sopsdiffer"]
-	textconv = sops -d
-[credentials]
-	helper = osxkeychain
+  textconv = sops -d
+
 [core]
-	excludesfile = /Users/simon/.git/.gitignore
+  excludesfile = /Users/simon/.git/.gitignore
