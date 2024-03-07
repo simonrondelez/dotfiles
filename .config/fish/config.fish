@@ -10,6 +10,9 @@ if status is-interactive
   # Settings for aws-vault
   set -gx AWS_VAULT_PROMPT ykman
 
+  # Override terragrunt with opentofu
+  set -gx TERRAGRUNT_TFPATH 'tofu' 
+
   # Settings for GPG
   set -gx GPG_TTY (tty)
 

@@ -9,7 +9,7 @@ abbr fly-clean 'fly prune-worker --all-stalled'
 abbr tfdocs terraform-docs
 
 # I want unset
-abbr unset set -e
+abbr unset 'set -e'
 
 # Git
 abbr cdroot 'cd $(git root)'
