@@ -7,14 +7,15 @@ if status is-interactive
 
   starship init fish | source
 
-  # Settings for aws-vault
-  set -gx AWS_VAULT_PROMPT ykman
-
   # Override terragrunt with opentofu
   set -gx TERRAGRUNT_TFPATH 'tofu' 
 
   # Settings for GPG
   set -gx GPG_TTY (tty)
+
+  # Prefer US English and use UTF-8
+  set -gx LANG en_US.UTF-8
+  set -gx LC_ALL en_US.UTF-8
 
   # Load Homebrew
   # eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
