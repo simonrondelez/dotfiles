@@ -14,7 +14,8 @@ abbr unset 'set -e'
 # Git
 abbr cdroot 'cd $(git root)'
 abbr gitlog "git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
-abbr gitclean "git branch | grep -v 'master' | grep -v 'main' | xargs git branch -D"
+abbr gitclean "git branch --merged | grep -v 'master' | grep -v 'main' | xargs git branch -D"
+abbr gitclean-recursively 'find . -maxdepth 3 -type d -exec sh -c "cd {}; git branch --merged | grep -v 'master' | grep -v 'main' | xargs git branch -D" \;'
 
 
 # IP address
