@@ -1,7 +1,6 @@
 [alias]
   l = log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset| %s %Cgreen[%an]' -n 20 --graph --abbrev-commit --date=short
   commit = commit
-  root = rev-parse --show-toplevel
 
 [user]
   name = Simon Rondelez

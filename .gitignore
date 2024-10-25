@@ -51,6 +51,8 @@ Thumbs.db
 .bash_history
 .zsh_history
 .lesshst
+.python_history
+.wget-hsts
 
 #VIM
 .viminfo
