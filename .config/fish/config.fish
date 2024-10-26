@@ -50,4 +50,6 @@ if status is-interactive
   end
 
   source ~/.secrets.sh
+
+  set -gx K9S_CONFIG_DIR $HOME/.config/.k9s
 end
