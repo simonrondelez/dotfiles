@@ -42,4 +42,4 @@
   textconv = sops -d
 
 [core]
-  excludesfile = /Users/simon/.git/.gitignore
+	excludesfile = /Users/simon/.gitignore_global
