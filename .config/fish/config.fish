@@ -8,7 +8,7 @@ if status is-interactive
   starship init fish | source
 
   # Override terragrunt with opentofu
-  set -gx TERRAGRUNT_TFPATH 'tofu' 
+  set -gx TG_TF_PATH 'tofu' 
 
   # Settings for GPG
   set -gx GPG_TTY (tty)
